@@ -16,6 +16,7 @@
     notify:
       - restart apache
 
+  - name: Update Apache to process PHP files first
     lineinfile:
       path: /etc/apache2/mods-enabled/dir.conf
       regexp: '^DirectoryIndex'
@@ -24,5 +25,5 @@
       - restart apache
 
   handlers:
-   - name: restart apache
+  - name: restart apache
      service: name=apache2 state=restarted
