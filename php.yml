@@ -13,15 +13,15 @@
       - php-mysql
       - php-xml
       - php-gd
-     notify:
+    notify:
       - restart apache
 
-   - name: Update Apache to process PHP files first
-   - lineinfile:
-        path: /etc/apache2/mods-enabled/dir.conf
-        regexp: '^DirectoryIndex'
-        line: 'DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm'
-     notify:
+  - name: Update Apache to process PHP files first
+  - lineinfile:
+    path: /etc/apache2/mods-enabled/dir.conf
+    regexp: '^DirectoryIndex'
+    line: 'DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm'
+    notify:
       - restart apache
 
   handlers:
