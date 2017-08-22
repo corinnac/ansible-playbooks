@@ -1,7 +1,9 @@
-[web]
+[webservers]
 sfpl-web-w400 ansible_host=172.30.236.84 ansible_user=root
 
 [database]
 sfpl-web-db400 ansible_host=172.30.236.94 ansible_user=root
 
+[php]
+sfpl-web-w400 ansible_host=172.30.236.84 ansible_user=root
 
